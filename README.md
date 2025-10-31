@@ -5,13 +5,14 @@
 ![NLTK](https://img.shields.io/badge/Library-NLTK-green)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Contributors](https://img.shields.io/badge/Contributors-3-orange)
 
 ---
 
 ## 📄 Overview  
 
 This project presents both a **survey** and an **implementation** of text summarization techniques using **Python**.  
-Follows major summarization methods from **statistical** to **deep learning** approaches and implements a **lightweight frequency-based summarizer** using the **Natural Language Toolkit (NLTK)**.
+The accompanying report — *“Text Summarization in Python: A Comprehensive Survey and Implementation”* — reviews major summarization methods from **statistical** to **deep learning** approaches and implements a **lightweight frequency-based summarizer** using the **Natural Language Toolkit (NLTK)**.
 
 The summarizer extracts the most relevant sentences from input text based on **word frequency scores** and introduces a **randomized selection mechanism** to generate varied and coherent summaries.
 
@@ -64,34 +65,41 @@ The summarizer extracts the most relevant sentences from input text based on **w
 │               Final Summary                │
 └────────────────────────────────────────────┘
 ```
+
 ---
 
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
-bash
-Copy code
+## ⚙️ Installation & Setup  
+
+### 1️⃣ Clone the Repository  
+```bash
 git clone https://github.com/<your-username>/text-summarization-python.git
 cd text-summarization-python
-2️⃣ Install Dependencies
-bash
-Copy code
+```
+
+### 2️⃣ Install Dependencies  
+```bash
 pip install nltk
-3️⃣ Download Required NLTK Data
-python
-Copy code
+```
+
+### 3️⃣ Download Required NLTK Data  
+```python
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
-4️⃣ Run the Script
-bash
-Copy code
+```
+
+### 4️⃣ Run the Script  
+```bash
 python "Source Code - Text Summarizer.py"
+```
 
 ---
 
-💻 Implementation
+## 💻 Implementation  
 
-Copy code
+**File:** `Source Code - Text Summarizer.py`
+
+```python
 import random
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
@@ -117,51 +125,71 @@ def text_summarizer(text, num_sentences=3):
     summary = ' '.join([sentences[i] for i, _ in summary_sentences])
     return summary
 
----
-
 # Example usage
 text = """Your input text here."""
 print(text_summarizer(text))
-🧪 Example
-Input:
-
-"Text summarization is an essential NLP task aimed at condensing large amounts of information into shorter, meaningful summaries."
-
-Output:
-
-"Text summarization is an essential NLP task. It condenses large amounts of information into shorter, meaningful summaries."
+```
 
 ---
 
-Future Enhancements
-Integrate semantic & contextual analysis
+## 🧪 Example  
 
-Explore transformer-based summarizers (BERT, Pegasus, T5)
+**Input:**  
+> "Text summarization is an essential NLP task aimed at condensing large amounts of information into shorter, meaningful summaries."
 
-Implement ROUGE/BLEU evaluation metrics
-
-Develop web or GUI interface for real-time summarization
-
-Support for multi-language summarization
+**Output:**  
+> "Text summarization is an essential NLP task. It condenses large amounts of information into shorter, meaningful summaries."
 
 ---
 
-References
-Mishra R. et al. (2014). Text Summarization in the Biomedical Domain: A Systematic Review of Recent Research. Journal of Biomedical Informatics.
+## 📈 Comparative Analysis (from Report)
 
-Gupta S. & Gupta V. (2019). Text Summarization Techniques: A Brief Survey. IJETAE.
-
-Nenkova P. & McKeown K. (2012). A Survey of Text Summarization Techniques. Springer.
-
-Liu Y. & Lapata M. (2019). Text Summarization with Pretrained Encoders. EMNLP.
+| Approach | Description | Strengths | Weaknesses |
+|-----------|--------------|------------|-------------|
+| **Statistical (Our Approach)** | Frequency-based scoring | Simple, fast, interpretable | Lacks deep context |
+| **Machine Learning** | Feature extraction models | Context-aware | Requires labeled datasets |
+| **Deep Learning** | Transformer-based (e.g., BERT, T5) | High accuracy | Computationally expensive |
 
 ---
 
-Conclusion
-This project demonstrates a lightweight, explainable, and efficient text summarization approach using Python’s NLTK library.
-It serves as both a learning tool and a baseline for future NLP research, bridging classical statistical techniques and modern machine learning advancements.
+## 🚀 Future Enhancements  
 
-🧩 “Efficiency through simplicity — building blocks for advanced summarization.”
+- Integrate **semantic & contextual analysis**  
+- Explore **transformer-based summarizers** (BERT, Pegasus, T5)  
+- Implement **ROUGE/BLEU** evaluation metrics  
+- Develop **web or GUI interface** for real-time summarization  
+- Support for **multi-language summarization**
 
-🪪 License
-This project is licensed under the MIT License – feel free to use, modify, and distribute.
+---
+
+## 🧾 References  
+
+1. Mishra R. *et al.* (2014). *Text Summarization in the Biomedical Domain: A Systematic Review of Recent Research.* *Journal of Biomedical Informatics.*  
+2. Gupta S. & Gupta V. (2019). *Text Summarization Techniques: A Brief Survey.* *IJETAE.*  
+3. Nenkova P. & McKeown K. (2012). *A Survey of Text Summarization Techniques.* Springer.  
+4. Liu Y. & Lapata M. (2019). *Text Summarization with Pretrained Encoders.* *EMNLP.*
+
+---
+
+## 👥 Contributors  
+
+| Name | Roll Number |
+|------|--------------|
+| **[Your Name Here]** | 24MIS1134 |
+| **[Your Name Here]** | 24MIS1144 |
+| **[Your Name Here]** | 24MIS1163 |
+
+---
+
+## 🏁 Conclusion  
+
+This project demonstrates a **lightweight, explainable**, and **efficient** text summarization approach using Python’s NLTK library.  
+It serves as both a **learning tool** and a **baseline** for future NLP research, bridging classical statistical techniques and modern machine learning advancements.  
+
+> 🧩 *“Efficiency through simplicity — building blocks for advanced summarization.”*
+
+---
+
+## 🪪 License  
+
+This project is licensed under the **MIT License** – feel free to use, modify, and distribute.
