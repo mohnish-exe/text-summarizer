@@ -5,14 +5,13 @@
 ![NLTK](https://img.shields.io/badge/Library-NLTK-green)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
-![Contributors](https://img.shields.io/badge/Contributors-3-orange)
 
 ---
 
 ## 📄 Overview  
 
 This project presents both a **survey** and an **implementation** of text summarization techniques using **Python**.  
-The accompanying report — *“Text Summarization in Python: A Comprehensive Survey and Implementation”* — reviews major summarization methods from **statistical** to **deep learning** approaches and implements a **lightweight frequency-based summarizer** using the **Natural Language Toolkit (NLTK)**.
+Follows major summarization methods from **statistical** to **deep learning** approaches and implements a **lightweight frequency-based summarizer** using the **Natural Language Toolkit (NLTK)**.
 
 The summarizer extracts the most relevant sentences from input text based on **word frequency scores** and introduces a **randomized selection mechanism** to generate varied and coherent summaries.
 
@@ -64,6 +63,9 @@ The summarizer extracts the most relevant sentences from input text based on **w
 ┌────────────────────────────────────────────┐
 │               Final Summary                │
 └────────────────────────────────────────────┘
+```
+---
+
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
 bash
@@ -84,10 +86,11 @@ nltk.download('stopwords')
 bash
 Copy code
 python "Source Code - Text Summarizer.py"
-💻 Implementation
-File: Source Code - Text Summarizer.py
 
-python
+---
+
+💻 Implementation
+
 Copy code
 import random
 from nltk.corpus import stopwords
@@ -114,6 +117,8 @@ def text_summarizer(text, num_sentences=3):
     summary = ' '.join([sentences[i] for i, _ in summary_sentences])
     return summary
 
+---
+
 # Example usage
 text = """Your input text here."""
 print(text_summarizer(text))
@@ -126,13 +131,9 @@ Output:
 
 "Text summarization is an essential NLP task. It condenses large amounts of information into shorter, meaningful summaries."
 
-📈 Comparative Analysis (from Report)
-Approach	Description	Strengths	Weaknesses
-Statistical (Our Approach)	Frequency-based scoring	Simple, fast, interpretable	Lacks deep context
-Machine Learning	Feature extraction models	Context-aware	Requires labeled datasets
-Deep Learning	Transformer-based (e.g., BERT, T5)	High accuracy	Computationally expensive
+---
 
-🚀 Future Enhancements
+Future Enhancements
 Integrate semantic & contextual analysis
 
 Explore transformer-based summarizers (BERT, Pegasus, T5)
@@ -143,7 +144,9 @@ Develop web or GUI interface for real-time summarization
 
 Support for multi-language summarization
 
-🧾 References
+---
+
+References
 Mishra R. et al. (2014). Text Summarization in the Biomedical Domain: A Systematic Review of Recent Research. Journal of Biomedical Informatics.
 
 Gupta S. & Gupta V. (2019). Text Summarization Techniques: A Brief Survey. IJETAE.
@@ -152,9 +155,9 @@ Nenkova P. & McKeown K. (2012). A Survey of Text Summarization Techniques. Sprin
 
 Liu Y. & Lapata M. (2019). Text Summarization with Pretrained Encoders. EMNLP.
 
+---
 
-
-🏁 Conclusion
+Conclusion
 This project demonstrates a lightweight, explainable, and efficient text summarization approach using Python’s NLTK library.
 It serves as both a learning tool and a baseline for future NLP research, bridging classical statistical techniques and modern machine learning advancements.
 
